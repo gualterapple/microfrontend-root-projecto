@@ -58,8 +58,15 @@
       }
     }
   </script>
+  <% } else {  %>
+    <script type="systemjs-importmap">
+      "imports": {
+        "@gualter/root-config": "http://localhost:7000/gualter-root-config.js",
+        "@gualter/nav-bar-angular": "http://localhost:7002/main.js",
+        "@gualter/angular-auth": "http://localhost:7004/main.js"
+      }
+    </script>
   <% } %>
-
   <!--
     If you need to support Angular applications, uncomment the script tag below to ensure only one instance of ZoneJS is loaded
     Learn more about why at https://single-spa.js.org/docs/ecosystem-angular/#zonejs
@@ -84,5 +91,8 @@
     System.import('@gualter/root-config');
   </script>
   <import-map-overrides-full show-when-local-storage="devtools" dev-libs></import-map-overrides-full>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+  integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+  crossorigin="anonymous"></script>
 </body>
 </html>
